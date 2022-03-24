@@ -1,6 +1,6 @@
 project(DBoW2 CXX)
 
-cmake_minimum_required(VERSION 2.7)
+cmake_minimum_required(VERSION 3.0)
 set(BUILD_SHARED_LIBS ON CACHE BOOL "Build shared libraries?")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3 -mtune=native -march=native")
 
@@ -10,7 +10,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 message(STATUS "Build type: " ${CMAKE_BUILD_TYPE})
 
-find_package(OpenCV 3 REQUIRED)
+find_package(OpenCV REQUIRED)
 
 set(LIBRARY_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/lib")
 

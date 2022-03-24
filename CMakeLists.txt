@@ -1,12 +1,12 @@
 project( PL-SLAM )
 
-cmake_minimum_required(VERSION 2.7)
+cmake_minimum_required(VERSION 3.0)
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
 
-find_package(OpenCV 3 REQUIRED)
+find_package(OpenCV REQUIRED)
 find_package(Boost REQUIRED COMPONENTS regex thread system filesystem)
-find_package(G2O      REQUIRED)
+find_package(g2o      REQUIRED)
 find_package(Eigen3   REQUIRED)
 
 if(COMMAND cmake_policy)
