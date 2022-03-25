@@ -30,7 +30,7 @@ add_definitions(-DBOOST_NO_CXX11_SCOPED_ENUMS)
 
 # MRPT library (optional, only with representation purposes)
 if(HAS_MRPT)
-FIND_PACKAGE(MRPT REQUIRED base opengl gui hwdrivers)
+FIND_PACKAGE(MRPT REQUIRED core opengl gui hwdrivers)
 set(MRPT_DONT_USE_DBG_LIBS 1) #use release libraries for linking even if "Debug" CMake build
 add_definitions(-DHAS_MRPT)
 endif(HAS_MRPT)
